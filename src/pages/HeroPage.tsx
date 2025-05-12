@@ -70,26 +70,26 @@ export default function HeroPage() {
         </div>
         {/* DETAILS AREA */}
         <div className="h-full">
-          <div className="flex flex-col items-center justify-center -mt-28 h-full">
-            <h1 className="font-inter md:text-[54px] text-4xl tracking-tighter text-near-black capitalize font-[500] leading-tight text-center animate-slide-up">
-              <span className="color-cycle-bg transform-3d rounded-bl-2xl rounded-tr-2xl text-white px-2 py-1 shadow-button">
+          <div className="flex flex-col items-center justify-center -mt-36 sm:-mt-28 h-full ">
+            <h1 className="font-inter md:text-[54px] sm:text-[40px] text-[25px] tracking-tighter text-near-black capitalize font-[500] leading-tight text-center animate-slide-up">
+              <span className="color-cycle-bg transform-3d rounded-bl-2xl rounded-tr-2xl text-white px-2 py-1 shadow-button md:text-[54px] sm:text-[44px] text-[30px]">
                 TRANSFORMS
               </span>{" "}
               the way to connect <br />& book PROFESSIONALS online
             </h1>
             <p
-              className="mt-4 font-roboto text-[18px] text-gray-600 text-center tracking-wide animate-slide-up"
+              className="sm:mt-4 mt-8 font-roboto text-[14px] md:text-[18px] text-gray-600 text-center tracking-wide animate-slide-up"
               style={{ animationDelay: "0.2s" }}
             >
               Zipserve is not a platform, it’s a movement to redefine <br />{" "}
               India’s home service marketplace
             </p>
           </div>
-          <div className=" flex items-center -mt-48 justify-center gap-10 mb-10 animate-slide-up">
+          <div className=" flex items-center -mt-56 md:-mt-48 justify-center gap-10 mb-10 animate-slide-up">
             <div className="flex flex-row items-center justify-center w-fit">
               <AnimatedTooltip items={people} />
             </div>
-            <p className="font-light font-inter tracking-tighter capitalize">
+            <p className="font-light font-inter tracking-tighter capitalize md:text-[16px] text-[12px] ">
               more than 200+ customers trust us
             </p>
           </div>
