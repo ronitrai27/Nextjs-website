@@ -1,26 +1,176 @@
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Define Fonts, Colors, and Gradients in Theme */
+@theme {
+  /* Fonts */
+  --font-inter: "Inter", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+
+  /* Colors */
+  --color-primary-blue: oklch(0.55 0.18 260); /* Deep navy-blue, #1E40AF */
+  --color-accent-gold: oklch(0.85 0.14 85); /* Vibrant gold, #F59E0B */
+  --color-white: oklch(1 0 0); /* Pure white, #FFFFFF */
+  --color-cool-gray: oklch(0.94 0.01 260); /* Cool gray, #F1F5F9 */
+  --color-near-black: oklch(0.28 0.02 260); /* Deep near-black, #1E293B */
+  --color-gradient-primary-start: oklch(0.55 0.18 260); /* Navy-blue, #1E40AF */
+  --color-gradient-primary-end: oklch(0.50 0.20 280); /* Deep purple-blue, #4C1D95 */
+  --color-gradient-accent-start: oklch(0.85 0.14 85); /* Gold, #F59E0B */
+  --color-gradient-accent-end: oklch(0.80 0.16 90); /* Amber, #D97706 */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Custom Utilities */
+@layer utilities {
+  /* Shadows */
+  .shadow-card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
+
+  .shadow-button {
+    box-shadow: 0 2px 8px rgba(30, 64, 175, 0.2); /* Matches primary-blue */
+  }
+
+  .shadow-modal {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Gradient Utilities */
+  .gradient-primary {
+    background: linear-gradient(135deg, oklch(0.55 0.18 260), oklch(0.50 0.20 280));
+  }
+
+  .gradient-accent {
+    background: linear-gradient(135deg, oklch(0.85 0.14 85), oklch(0.80 0.16 90));
+  }
+
+  .hero-grid {
+    position: relative;
+    background-image: 
+      /* Radial gradient for lighter center */
+      radial-gradient(circle at center, rgba(255, 255, 255, 0.5) 0%, transparent 100%),
+      /* Subtle grid pattern */
+      linear-gradient(to right, oklch(0.94 0.01 260) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(0.94 0.01 260) 1px, transparent 1px);
+    background-size: 100% 100%, 25px 25px, 25px 25px; /* Grid size: 20px squares */
+    background-position: center;
+  }
+
+  /* Ensure content stays above grid */
+  .hero-grid::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+ 
+
+  .hero-grid > * {
+    position: relative;
+    z-index: 1; /* Content above grid */
+  }
+
+  .color-cycle-bg {
+    animation: colorCycleBg 25s ease-in-out infinite;
+  }
+
+  /* Color-Changing Animation */
+  .color-cycle-bg {
+    animation: colorCycleBg 25s ease-in-out infinite;
+  }
+
+  .color-cycle-text {
+    animation: colorCycleText 25s ease-in-out infinite;
+  }
+
+  @keyframes colorCycleBg {
+    0%, 100% {
+      background-color: oklch(0.55 0.18 260); /* primary-blue, #1E40AF */
+    }
+    20% {
+      background-color: oklch(0.60 0.18 260); /* lighter navy-blue, ~#2563EB */
+    }
+    40% {
+      background-color: oklch(0.55 0.19 270); /* mid-tone purple, ~#6D28D9 */
+    }
+    60% {
+      background-color: oklch(0.28 0.02 260); /* gradient-primary-end, #4C1D95 */
+    }
+    80% {
+      background-color: oklch(0.85 0.14 85); /* lighter navy-blue, ~#2563EB */
+    }
+  }
+
+  @keyframes colorCycleText {
+    0%, 100% {
+      color: oklch(0.55 0.18 260); /* primary-blue, #1E40AF */
+    }
+    20% {
+      color: oklch(0.60 0.18 260); /* lighter navy-blue, ~#2563EB */
+    }
+    40% {
+      color: oklch(0.55 0.19 270); /* mid-tone purple, ~#6D28D9 */
+    }
+    60% {
+      color: oklch(0.28 0.02 260); /* gradient-primary-end, #4C1D95 */
+    }
+    80% {
+      color:  oklch(0.85 0.14 85); /* lighter navy-blue, ~#2563EB */
+    }
+  }
+  /* Entrance Animation */
+  .animate-slide-up {
+    animation: slideUp 1s ease-out forwards;
+  }
+
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .float-3d {
+    animation: float3D 4s ease-in-out infinite;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+
+  @keyframes float3D {
+    0%, 100% {
+      transform: translateY(0) rotateX(2deg) rotateY(2deg);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+      transform: translateY(-10px) rotateX(-2deg) rotateY(-2deg);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+ /* Add to app/global.css under @layer utilities */
+
+/* Feature Section Gradient */
+.feature-gradient {
+  background: linear-gradient(
+    to bottom,
+    oklch(1 0 0) 0%, /* white, #FFFFFF */
+    rgba(115, 147, 214, 0.277) 50%, /* primary-blue, #1E40AF, faint */
+    rgba(152, 173, 210, 0.15) 100% /* gradient-primary-end, #4C1D95, faint */
+  );
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.gradient-text {
+  background: linear-gradient(90deg, #112457 0%, #97afd3 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 }
