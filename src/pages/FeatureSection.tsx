@@ -20,39 +20,39 @@ function FeatureSection() {
       <Ripple />
       <Iphone15Pro
         className="size-[40%] md:size-[50%]  absolute top-50 left-1/2 transform -translate-x-1/2"
-        src="/weshare.jpeg"
+        src="/imgnewss.png"
       />
       {/* FLOATING ICONS */}
-      <div className=" gradient-primary p-2 rounded-full w-fit text-cool-gray absolute top-12 left-1/2 transform -translate-x-1/2 float-3d">
-        <h1 className="flex items-center gap-2 font-inter font-medium text-[18px] z-50">
+      <div className=" gradient-primary p-2 rounded-full w-fit text-cool-gray absolute top-12 left-1/2 transform -translate-x-1/2 float-4d">
+        <h1 className="flex items-center gap-2 font-inter font-medium text-[18px] z-50 tracking-tight">
           <LuBadgeCheck className="text-[16px] md:text-[24px] text-near-black fill-cool-gray" />{" "}
           Experience Unmatched Transparency
         </h1>
       </div>
 
       {/* FLOATING ICONS */}
-      <div className=" absolute top-[35%] left-[70%] float-3d shadow-button rounded-lg  cursor-pointer">
-        <div className=" p-1 text-cool-gray gradient-primary flex items-center gap-2 max-w-[20rem] rounded-lg">
+      <div className=" absolute top-[35%] left-[68%] float-4d shadow-button rounded-lg  cursor-pointer">
+        <div className=" p-2 text-cool-gray gradient-primary flex  gap-2 min-w-[20rem] max-w-[25rem] rounded-lg">
           <Image
             src="/img4.png"
             alt="Trusted Worker"
             width={180}
             height={180}
-            className="w-32 h-32 object-cover rounded-md"
+            className="w-32 h-32 object-cover rounded-md scale-125"
           />
-          <div className="flex flex-col gap-1 font-roboto text-[15px] font-light tracking-tight">
-            <h1 className="text-center">
-              Real-Time Tracking for Peace of Mind
+          <div className="flex flex-col gap-1 font-roboto text-[15px] bg-cool-gray text-near-black rounded-md p-2 justify-center">
+            <h1 className="flex items-center gap-1 justify-center font-medium tracking-wide">
+              <LuSquareCheckBig className="text-[18px]" /> Live Tracking
             </h1>
-            <p className="text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit
+            <p className="text-center tracking-tight font-light font-inter">
+              Real time precise tracking for peace of mind.
             </p>
           </div>
         </div>
       </div>
 
       {/* FLOATING ICONS */}
-      <div className=" gradient-accent p-2 rounded-full w-fit text-white absolute bottom-36 left-[60%]  float-3d">
+      <div className=" gradient-primary p-2 rounded-full w-fit text-white absolute bottom-36 left-[60%]  float-4d">
         <h1 className="flex items-center gap-2 font-inter font-medium text-[18px] z-50">
           <AiOutlineThunderbolt className="text-[16px] md:text-[24px]" />{" "}
           Instant Booking Made Easy
@@ -60,26 +60,28 @@ function FeatureSection() {
       </div>
 
       {/* FLOATING ICONS */}
-      <div className=" absolute top-[26%] left-[10%] float-3d shadow-button rounded-lg  cursor-pointer">
-        <div className=" p-1 text-white gradient-accent flex items-center gap-2 max-w-[20rem] rounded-lg">
+      <div className=" absolute top-[22%] left-[6%] float-3d shadow-button rounded-lg  cursor-pointer">
+        <div className=" p-2 text-white gradient-primary flex  gap-5 min-w-[20rem] max-w-[25rem] rounded-lg">
+          <div className="flex flex-col gap-1 font-roboto text-[15px] bg-cool-gray text-near-black rounded-md p-2 justify-center">
+            <h1 className="flex items-center gap-1 justify-center font-medium tracking-wide">
+              <LuSquareCheckBig className="text-[18px]" /> Live Tracking
+            </h1>
+            <p className="text-center tracking-tight font-light font-inter">
+              Real time precise tracking for peace of mind.
+            </p>
+          </div>
           <Image
             src="/img5.png"
             alt="Trusted Worker"
             width={180}
             height={180}
-            className="w-32 h-32 object-cover rounded-md"
+            className="w-32 h-32 object-cover rounded-md scale-125"
           />
-          <div className="flex flex-col gap-1 font-roboto text-[15px] font-light tracking-tight">
-            <h1 className="text-center">Earn Rewards with Every Booking</h1>
-            <p className="text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit
-            </p>
-          </div>
         </div>
       </div>
 
       {/* FLOATING ICONS */}
-      <div className=" gradient-accent p-2 rounded-full w-fit text-white absolute top-[60%] left-[16%]  float-3d">
+      <div className=" gradient-primary p-2 rounded-full w-fit text-white absolute top-[54%] left-[12%]  float-4d">
         <h1 className="flex items-center gap-2 font-inter font-medium text-[18px] z-50">
           <AiOutlineThunderbolt className="text-[16px] md:text-[24px]" />{" "}
           Instant Booking Made Easy
@@ -87,23 +89,23 @@ function FeatureSection() {
       </div>
 
       {/* FLOATING ICONS */}
-      <div className=" absolute top-[74%] left-[19%] float-3d  shadow-button rounded-lg  cursor-pointer">
-        <div className=" p-1 text-near-black bg-cool-gray flex items-center gap-2 max-w-[20rem] ">
+      <div className=" absolute top-[70%] left-[10%] float-4d shadow-button rounded-lg  cursor-pointer">
+        <div className=" p-2 text-white gradient-primary flex  gap-5 min-w-[20rem] max-w-[25rem] rounded-lg">
+          <div className="flex flex-col gap-1 font-roboto text-[15px] bg-cool-gray text-near-black rounded-md p-2 justify-center">
+            <h1 className="flex items-center gap-1 justify-center font-medium tracking-wide">
+              <LuSquareCheckBig className="text-[18px]" /> Live Tracking
+            </h1>
+            <p className="text-center tracking-tight font-light font-inter">
+              Real time precise tracking for peace of mind.
+            </p>
+          </div>
           <Image
             src="/img5.png"
             alt="Trusted Worker"
             width={180}
             height={180}
-            className="w-32 h-32 object-cover rounded-md"
+            className="w-32 h-32 object-cover rounded-md scale-125"
           />
-          <div className="flex flex-col gap-1 font-roboto text-[15px] font-light tracking-tight">
-            <h1 className="text-center">
-              Real-Time Tracking for Peace of Mind
-            </h1>
-            <p className="text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit
-            </p>
-          </div>
         </div>
       </div>
 
