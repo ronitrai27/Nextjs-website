@@ -1,5 +1,5 @@
 import { GridLayout } from "@/components/grid-layout";
-
+import { ShimmerButton } from "@/components/magicui/shimmer-button";
 export default function ImageSection() {
   // Content data - easy to replace later
   const gridItems = [
@@ -57,6 +57,25 @@ export default function ImageSection() {
         footerText={footerText}
         features={features}
       />
+      {/* CTA FOR EMPLOYEE AND WORKER */}
+      <div className="mt-10 min-w-[50rem] px-10 flex items-center gap-10">
+        <div className="flex flex-col gap-2">
+          <h1 className="font-inter font-medium text-[18px]">
+            are you a professional ? ready to serve people !
+          </h1>
+          <ShimmerButton className="w-fit py-1" background="rgb(245, 158, 11)">
+            Register
+          </ShimmerButton>
+        </div>
+        <div className="flex flex-col gap-2 ">
+          <h1 className="font-inter font-medium text-[18px]">
+            are you a Candidate ? join us{" "}
+          </h1>
+          <ShimmerButton className="w-fit py-1" background="rgb(30, 64, 175)">
+            Work with us
+          </ShimmerButton>
+        </div>
+      </div>
     </main>
   );
 }
