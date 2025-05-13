@@ -6,6 +6,7 @@ import FeatureSection from "@/pages/FeatureSection";
 import { PointerHighlight } from "@/components/ui/pointer-highlight";
 import ImageSection from "@/components/ImageSection";
 import { LuFocus, LuScanEye } from "react-icons/lu";
+import Footer from "@/pages/Footer";
 // import { AuroraText } from "@/components/magicui/aurora-text";
 // import ColorShowcase from "@/components/ColorShowcase";
 export default function Home() {
@@ -82,7 +83,7 @@ export default function Home() {
       </div>
 
       <ImageSection />
-      {/* <ColorShowcase /> */}
+      <Footer />
     </div>
   );
 }

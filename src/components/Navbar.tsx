@@ -1,7 +1,7 @@
 "use client";
 import { BriefcaseBusiness, MessageSquareShare } from "lucide-react";
 import { useEffect, useState } from "react";
-import cn from "classnames"; // optional: for cleaner conditional classNames
+import cn from "classnames";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,7 +20,7 @@ export default function Navbar() {
       className={cn(
         "fixed top-0 left-0 z-50 w-full transition-all duration-300",
         isScrolled
-          ? "bg-white/30 backdrop-blur-md shadow-md py-2 px-4"
+          ? "bg-white/30 backdrop-blur-md shadow-md py-4 px-10"
           : "bg-white py-3 px-4"
       )}
     >
@@ -30,7 +30,7 @@ export default function Navbar() {
           <h1
             className={cn(
               "text-near-black tracking-tight font-roboto font-medium transition-all",
-              isScrolled ? "text-[20px]" : "sm:text-[24px] md:text-[28px]"
+              isScrolled ? "text-[24px]" : "sm:text-[24px] md:text-[28px]"
             )}
           >
             Zipserve
